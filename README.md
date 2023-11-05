@@ -1,17 +1,24 @@
-# Nome do projeto
+# :information_source: Iwork
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O Iwork é um projeto que tem como objetivo desenvolver uma aplicação que facilite a interação
+entre empresas e clientes no âmbito de prestações de serviços domésticos, onde o
+cliente seleciona sua opção dentre diversos tipos de serviços prestados, empresas e
+funcionários, de forma em que todos os envolvidos possam modernizar a forma com a
+qual operam intuitivamente, prezando a todo momento pela praticidade na experiência
+de todos os usuários.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Igor Daniel Hamzi Weston
+* Grazielle Sorrentino Santos Souza
+* Luísa Ferreira Marques
+* Nicole Marie Agnelo Marques
+* Gabriel Dias Nogueira
+* Josué Santana Melo
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
+* Pedro Felipe Alves de Oliveira
 
 
 ## Instruções de utilização
