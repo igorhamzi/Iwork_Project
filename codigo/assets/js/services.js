@@ -424,7 +424,43 @@ function init(){
 document.addEventListener("DOMContentLoaded", function() {
     const listaDeEmpresas = document.getElementById('empresas-list');
     const empresas = dbInicial.empresas;
-  
+    
+function exibirEmpresasFiltradas(termoDePesquisa) {
+        listaDeEmpresas.innerHTML = '';
+
+        empresas.forEach(empresa => {
+            const nomeEmpresa = empresa.nome.toLowerCase();
+            const termoPesquisa = termoDePesquisa.toLowerCase();
+
+            if (nomeEmpresa.includes(termoPesquisa)) {
+                const li = document.createElement('li');
+                li.innerHTML = `Nome: ${empresa.nome}, Descrição: ${empresa.descricao}, Categoria: ${empresa.tipo_negocio}`;
+                listaDeEmpresas.appendChild(li);
+            }
+        });
+    }
+
+    function exibirEmpresas(filtrarPorCategoria) {
+        listaDeEmpresas.innerHTML = '';
+        empresas.forEach(empresa => {
+            if (empresa.tipo_negocio === filtrarPorCategoria) {
+                const li = document.createElement('li');
+                li.innerHTML = `Nome: ${empresa.nome}, Descrição: ${empresa.descricao}, Categoria: ${empresa.tipo_negocio}`;
+                listaDeEmpresas.appendChild(li);
+            }
+        });
+    }
+
+ 
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', function () {
+        const termoDePesquisa = searchInput.value;
+        exibirEmpresasFiltradas(termoDePesquisa);
+        if (searchInput.value === '') {
+            exibirEmpresas('');
+        }
+    });
+    
     function exibirEmpresas(filtrarPorCategoria) {
       listaDeEmpresas.innerHTML = ''; // Limpa a lista antes de exibir as empresas filtradas
       empresas.forEach(empresa => {
