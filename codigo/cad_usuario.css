@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #4B80A2;
+    display: flex;
+    padding: 3vh 15vh ;
+}
+.sec-txt-img{
+    max-width: 700px;
+    min-width: 70px;
+    align-items: center;
+    justify-content: center;
+}
+#img-cad{
+    width: 70%;
+    padding: 5%;
+}
+.sec-txt-img article{
+    padding: 5%;
+    width: 100%;
+    font-size: 4vh;
+    color: aliceblue;
+}
+
+
+.form-cad{
+    padding: 5vh;
+    margin: 10vh;
+    text-align: center;
+}
+.form-cad form{
+    width: 28vw;
+    height: 45vh;
+    text-align: center;
+    color: #4B80A2;
+    font-weight: 600;
+    background-color: white;
+    padding: 2vh;
+    padding-top: 5vh;
+}
+.form-cad input{
+    background-color: rgb(241, 241, 241);
+    border: none;
+    padding: 1vh;
+    width: 80%;
+    margin: 1vh;
+}
+.form-cad button{
+    padding: 2vh;
+    width: 12vw;
+    border-radius: 40px;
+    border: 4px solid #4B80A2;
+    margin-top: 5vh;
+    font-size: 2vh;
+    font-weight: 500;
+    color: rgb(106, 146, 171);
+    background-color: aliceblue;
+}
+.form-cad button:hover{
+    background-color: #053a60;
+}
+
+
+@media (max-width: 900px) {
+    
+    body{
+        background-color: #4B80A2;
+        display: flex;
+        flex-direction: column;
+        padding: 1vh;
+        text-align: center;
+    }
+
+    .sec-txt-img article{
+        padding: 1%;
+        width: 90%;
+        font-size: 2.5vh;
+        color: aliceblue;
+    }
+    .sec-txt-img{
+        margin-left: 2vw;
+    }
+    .form-cad{
+        padding: 1vh;
+        margin: 0%;
+        text-align: center;
+    }
+    .form-cad form{
+        width: 80vw;
+        height: 45vh;
+        text-align: center;
+        color: #4B80A2;
+        font-weight: 600;
+        background-color: white;
+        padding: 2vh;
+        padding-top: 5vh;
+    }
+    
+.form-cad button{
+    padding: 1vh;
+    width: 40vw;
+    border-radius: 40px;
+    border: 4px solid #4B80A2;
+    margin-top: 5vh;
+    font-size: 2vh;
+    font-weight: 500;
+    color: rgb(106, 146, 171);
+    background-color: aliceblue;
+}
+}
