@@ -1,163 +1,183 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-y: hidden; 
-  }
-  
-  header {
-    background-color: #346075;
-    color: #d3e4ec;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-  }
-  
-  .logo {
-    flex: 1;
-  }
-  
-  .logo img {
-    max-width: 100px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #c4dae5;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .search-bar {
-    background-color: #c4dae5;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    margin-top: 10px;
-    width: 250px;
-    margin: 0 auto; /* Centraliza a barra de busca */
-  }
-  
-  .search-icon {
-    padding: 5px;
-    color: #333;
-  }
-  
-  input[type="text"] {
-    border: none;
-    background: none;
-    outline: none;
-    width: 100%;
-    font-size: 16px;
-  }
-  
-  .filter-bar {
-    display: flex;
-    justify-content: center; /* Centraliza os elementos na .filter-bar */
-    margin-top: 10px;
-    background-color: #c4dae5;
-    color: #346075;
-    padding: 5px;
-    width: 100%;
-  }
-  
-  .filter-option {
-    margin-right: 10px;
-    padding: 8px 10px;
-    background-color: #c4dae5;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+header {
+  background-color: #346075;
+  color: #d3e4ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #c4dae5;
+  margin: 6px 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c4dae5;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  background-color: #c4dae5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  padding: 5px;
+  color: #333;
+}
+
+input[type="text"] {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #c4dae5;
+  color: #346075;
+  padding: 5px;
+  width: 100%;
+}
+
+.filter-option {
+  margin-right: 10px;
+  padding: 8px 10px;
+  background-color: #c4dae5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .company-list-container {
-  max-height: 500px; 
+  max-height: 500px;
   overflow: auto;
 }
-div.filter-bar button{
+
+div.filter-bar button {
   border: 1px solid #c4dae5;
 }
+
 ul#empresas-list {
   list-style: none;
   font-family: Arial;
   margin-bottom: 10px;
-  padding: 0; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: stretch; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 ul#empresas-list li {
-  
   box-sizing: border-box;
   border: 1px solid #000;
   border-left: none;
   border-right: none;
-  flex: 1; 
-  padding:10px;
+  flex: 1;
+  padding: 10px;
 }
-  
-  footer {
-    background-color: #346075;
-    color: #c4dae5;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .footer-icon img {
-    max-width: 30px;
-    margin-right: 20px;
-  }
-  
-  .footer-links {
-    text-align: right;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: #c4dae5;
-    margin: 0 10px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+
+footer {
+  background-color: #346075;
+  color: #c4dae5;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon img {
+  max-width: 30px;
+  margin-right: 20px;
+}
+
+.footer-links {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #c4dae5;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 600px) {
   .logo img {
     max-width: 80px;
-    /* Adjust the logo size for smaller screens */
   }
 
   .nav-links {
     display: none;
-    /* Hide the navigation links by default on small screens */
     flex-direction: column;
     width: 100%;
     background-color: #346075;
@@ -169,17 +189,14 @@ ul#empresas-list li {
 
   .nav-links.active {
     display: flex;
-    /* Show the navigation links when the menu is active */
   }
 
   .menu-toggle {
     display: block;
-    /* Display the menu toggle on small screens */
   }
 
   .filter-bar {
     flex-direction: column;
-    /* Stack the filter buttons vertically */
     align-items: center;
   }
 
