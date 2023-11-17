@@ -149,3 +149,46 @@ ul#empresas-list li {
   .footer-links a:hover {
     text-decoration: underline;
   }
+@media only screen and (max-width: 600px) {
+  .logo img {
+    max-width: 80px;
+    /* Adjust the logo size for smaller screens */
+  }
+
+  .nav-links {
+    display: none;
+    /* Hide the navigation links by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: #346075;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+    /* Show the navigation links when the menu is active */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Display the menu toggle on small screens */
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    /* Stack the filter buttons vertically */
+    align-items: center;
+  }
+
+  .filter-option {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  ul#empresas-list li {
+    margin-bottom: 10px;
+  }
+}
