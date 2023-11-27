@@ -498,3 +498,7 @@ function exibirEmpresasFiltradas(termoDePesquisa) {
   
     exibirEmpresas('');
 });
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
