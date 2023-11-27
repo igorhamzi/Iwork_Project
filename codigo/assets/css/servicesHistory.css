@@ -1,0 +1,287 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  background-color: #346075;
+  color: #d3e4ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px;
+}
+
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.menu-toggle {
+  margin-left: auto;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #c4dae5;
+  margin: 6px 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c4dae5;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #346075;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+th,
+td {
+  border: 1px solid #346075;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  color: #346075;
+}
+
+.last-cell {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #346075;
+  border-right: none;
+}
+
+.last-cell.no-border {
+  border: none;
+}
+
+.rate-button {
+  background-color: #346075;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-right: none;
+}
+
+.rate-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the pop-up container */
+.pop-up-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+/* Styles for the pop-up content */
+.pop-up-content {
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.input-rating {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-rating-button {
+  background-color: #346075;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.submit-rating-button:hover {
+  background-color: #0056b3;
+}
+
+.agradecimento-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #346075;
+  color: #c4dae5;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #c4dae5;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon img {
+  max-width: 30px;
+  margin-right: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+  height: 100%;
+  max-width: 200px; 
+min-width: 50px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.content {
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
