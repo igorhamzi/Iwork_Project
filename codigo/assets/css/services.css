@@ -4,6 +4,8 @@ html {
   padding: 0;
   height: 100%;
   overflow-y: hidden;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -75,6 +77,9 @@ nav ul li a:hover {
   width: 250px;
   margin: 0 auto;
 }
+main {
+  min-height: 500px;
+}
 
 .search-icon {
   padding: 5px;
@@ -139,7 +144,6 @@ footer {
   background-color: #346075;
   color: #c4dae5;
   padding: 20px 0;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -174,6 +178,10 @@ footer {
 @media only screen and (max-width: 600px) {
   .logo img {
     max-width: 80px;
+  }
+    body {
+    overflow-y: scroll;
+
   }
 
   .nav-links {
