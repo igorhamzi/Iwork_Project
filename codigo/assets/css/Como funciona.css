@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #4B80A2;
+}
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cadastro {
+  color: white;
+  font-size: 27px;
+  margin-right: 20px; 
+}
+
+.entrar {
+  background-color: #0d4c54;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px; 
+  height: 50px;
+  width: 120px;
+  margin-top: 14px;
+  margin-right: 10px;
+}
+
+.pergunta {
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  margin-left: 34%; 
+}
+
+.ordem {
+  display: inline-block;
+  margin-left: 18% ;
+}
+
+.img {
+  margin-left: 15px;
+  vertical-align: middle; 
+  height: 400px;
+}
+
+.cliente,
+.empresa {
+  background-color: #0d4c54;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle; /* Para alinhar verticalmente o texto */
+}
+
+.cliente {
+  width: 200px;
+  height: 70px;
+  margin-top: 5%;
+  margin-right: 100px;
+}
+
+.empresa {
+  width: 230px;
+  height: 70px;
+  margin-left: 100px; 
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .cadastro {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .entrar {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+
+  .pergunta {
+    font-size: 28px;
+    margin-left: 5%;
+  }
+
+  .ordem {
+    display: block;
+    margin-left: 5%;
+  }
+
+  .img {
+    margin-left: 10px;
+    max-width: 80%;
+  }
+
+  .cliente,
+  .empresa {
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+/* Responsividade para dispositivos menores (até 480px) */
+@media screen and (max-width: 480px) {
+  .cadastro {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .entrar {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-right: 4px;
+  }
+
+  .pergunta {
+    font-size: 24px;
+    margin-left: 3%;
+  }
+
+  .ordem {
+    display: block;
+    margin-left: 3%;
+  }
+
+  .img {
+    margin-left: 8px;
+    max-width: 90%;
+  }
+
+  .cliente,
+  .empresa {
+    font-size: 14px;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
