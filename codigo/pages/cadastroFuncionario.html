@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cad_u.css">
+    <script src="https://kit.fontawesome.com/11aa876265.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="./img/logo_iwork.png" alt="Iwork" srcset="">
+
+            <ul>
+                <li>Inicio</li>
+                <li>Como Funciona</li>
+                <li>Chamados</li>
+                <li>Login/Cadastro</li>
+                <li>Perfil</li>
+            </ul>
+
+            <button id="nav_buttom" class="nav">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </button>
+        </nav>
+
+        <div class="options_list">
+            <ul id="nav_mob">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Como Funciona</a></li>
+                <li><a href="#">Chamados</a></li>
+                <li><a href="#">Login/Cadastro</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </div>
+
+    </header>
+    
+
+    <main>
+        <h1>Construindo conexões profissionais, um cadastro de sucesso!</h1>
+        <h3>Cadastre seus funcionários e desbloqueie o potencial do seu negócio!</h3>
+
+        <div class="formulario">
+            <form action="">
+                <h3>Inforações Pessoais</h3>
+    
+                <label for="nome">Nome Completo:</label>
+                    <br>
+                    <input type="text" name="nome" id="nome">
+                    <br>
+    
+                <label for="data">Data de Nascimento:</label>
+                    <br>
+                    <input type="text" name="data" id="data">
+                    <br>
+    
+                <label for="gen">Genêro:</label>
+                    <br>
+                    <input type="text" name="gen" id="gen">
+                    <br>
+    
+                <label for="residencial">Endereço Residêncial:</label>
+                    <br>
+                    <input type="text" name="residencial" id="residencial">
+                    <br>
+                    
+                <label for="tel">Numero de telefone:</label>
+                    <br>
+                    <input type="text" name="tel" id="tel">
+                    <br>
+    
+                <label for="email">Email:</label>
+                    <br>
+                    <input type="text" name="email" id="email">
+                    <br>
+                
+                <label for="setor">Setor ou departamento:</label>
+                    <br>
+                    <input type="text" name="setor" id="setor">
+                    <br>
+            </form>
+        </div>
+
+        <div class="login">
+            <input type="text" name="user" id="user" placeholder="Nome de Usuário:">
+
+            <br>
+
+            <input type="text" name="senha" id="senha" placeholder="senha">
+        </div>
+
+        <input type="submit" value="Cadastrar Funcionário" id="cadastrarClienteBtn">
+    </main>
+
+
+    <script>
+        
+        document.getElementById("nav_buttom").addEventListener("click", function() {
+            var nav = document.getElementById("nav_mob");
+            nav.style.display = "block";
+        });
+
+
+        document.getElementById("cadastrarClienteBtn").addEventListener("click", function() {
+                // Obtém os valores do formulário
+                var nome = document.getElementById("nome").value;
+                var data = document.getElementById("data").value;
+                var gen = document.getElementById("gen").value;
+                var residencial = document.getElementById("residencial").value;
+                var tel = document.getElementById("tel").value;
+                var email = document.getElementById("email").value;
+                var setor = document.getElementById("setor").value;
+
+                // Cria um objeto com as informações do formulário
+                var funcionarioInfo = {
+                    nome: nome,
+                    data: data,
+                    gen: gen,
+                    residencial: residencial,
+                    tel: tel,
+                    email: email,
+                    setor: setor
+                };
+
+                // Obtém as informações de login
+                var username = document.getElementById("user").value;
+                var password = document.getElementById("senha").value;
+
+                // Salva as informações no localStorage
+                localStorage.setItem("db", JSON.stringify({
+                    funcionarioInfo: funcionarioInfo,
+                    username: username,
+                    password: password
+                }));
+
+                // Limpa o formulário
+                document.getElementById("cadastroForm").reset();
+
+                alert("Cadastro bem-sucedido!");
+            });
+    </script>
+    
+</body>
+</html>
