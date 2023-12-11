@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Usuário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="Edição de Usuário.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpeg" alt="Logo do Site">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Como Funciona</a></li>
+        <li><a href="#">Histórico de Serviços</a></li>
+        <li><a href="#">Login/Cadastrar</a></li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container">
+    <div class="row">
+      <div id="parteEsquerda" class="col-md-3">
+        <h1 class="titlePerfil">Perfil</h1>
+        <br>
+        <a id="imageLink" href="#">
+          <div id="imageContainer">
+            <img id="savedImage" src="img/Perfil Usuário Padrão.jpeg">
+          </div>
+        </a>
+        <br>
+        <br>
+        <div id="botão" class="row">
+          <button class="bnt">SAIR</button>
+        </div>
+        <div id="botão" class="row">
+          <button onclick="editarUsuario()" class="bnt">EDITAR</button>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="dadosPerfil">
+          <h5 id="title_nomeUsuario">Nome:</h5>
+          <input id="nomeUsuario" type="text" style="display: none;">
+          <br>
+          <h5 id="title_emailUsuario">E-mail:</h5>
+          <input id="emailUsuario" type="email" style="display: none;">
+          <br>
+          <h5 id="title_avaliacaoUsuario">Avaliação:</h5>
+          <input id="avaliacaoUsuario" type="email" style="display: none;">
+          <br>
+          <h5 id="title_enderecoUsuario">Endereço:</h5>
+          <input id="enderecoUsuario" type="email" style="display: none;">
+        </div>
+        <br>
+        <button style="margin-top: 7px;" onclick="salvarUsuario()" class="bnt">Salvar</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-icon">
+        <img src="Logo.jpeg" alt="Ícone">
+      </div>
+      <div class="footer-links">
+        <a href="#">Ajuda</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="Edição de Usuário.js"></script>
+</body>
+
+</html>
