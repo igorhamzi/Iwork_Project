@@ -42,6 +42,8 @@ nav ul{
 }
 .options_list ul{
     display: none;
+    position: absolute;
+    right: 0;
 }
 .options_list a{
     text-decoration: none;
@@ -79,6 +81,7 @@ main form{
     text-align: center;
     color: aliceblue;
     padding: 3vh;
+    margin: 0 auto;
 }
 form input{
     border: none;
@@ -91,7 +94,7 @@ form input{
 
 .login{
     margin: 5vh;
-    width: 90%;
+    width: 95%;
 }
 .login input{
     background-color: rgb(225, 231, 247);
@@ -109,9 +112,46 @@ input[type=submit]{
     color: aliceblue;
     border-radius: 8px;
 }
+input[type=submit]:hover{
+    background-color: #152126;
+}
+.formulario{
+    margin-left: 30%;
+    margin-right: 30%;
+}
 
+/*footer*/
+ 
+  
+footer {
+    background-color: #346075;
+    color: #c4dae5;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5vh;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #c4dae5;
+    font-weight: bold;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-icon img {
+    max-width: 30px;
+    margin-right: 20px;
+  }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
     nav ul{
         display: none;
     }
@@ -119,5 +159,9 @@ input[type=submit]{
   
         display: block;
     }
-    
+    .formulario{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
+
