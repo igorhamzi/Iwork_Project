@@ -77,8 +77,10 @@ nav ul li a:hover {
   width: 250px;
   margin: 0 auto;
 }
+
 main {
-  min-height: 500px;
+  min-height: calc(100% - 160px);
+  margin-bottom: 160px;
 }
 
 .search-icon {
@@ -146,6 +148,7 @@ footer {
   padding: 20px 0;
   bottom: 0;
   width: 100%;
+  position: fixed;
 }
 
 .footer-content {
