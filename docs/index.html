@@ -240,9 +240,9 @@
                   personas, (4) as respectivas propostas de valor e (5) o processo de ideação identificando as ideias
                   levantadas e sua priorização.</p>
               </div>
-              <object data="assets/files/processo-dt.pdf" type="application/pdf" width="100%" height="500px">
+              <object data="/docs/assets/files/dt.pdf" type="application/pdf" width="100%" height="500px">
                 <p>Não foi possível apresentar o arquivo PDF. Faça o download e abra no seu computador: <a
-                    href="/assets/files/processo-dt.pdf">Download</a></p>
+                    href="/docs/assets/files/dt.pdf">Download</a></p>
               </object>
             </section>
 
@@ -598,66 +598,6 @@
           </section>
           <hr class="divider">
 
-          <!-- Funcionalidades ==================== -->
-          <section id="ti_solucao">
-            <h2>Solução</h2>
-            <p class="lead">Esta seção apresenta todos os detalhes da solução criada no projeto.
-              <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse"
-                href="#collapseSolucao">Info</button>
-            </p>
-            <div class="alert alert-warning collapse" role="alert" id="collapseSolucao">
-              <p>Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos
-                administradores da solução.</p>
-              <p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura
-                de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
-            </div>
-
-            <section id="ti_video">
-              <h4>Video do Projeto</h4>
-              <p>O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse"
-                  href="#collapseVideo">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseVideo">
-                <p>O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é
-                  livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e
-                  direta.</p>
-                <p>Utilize o recurso de compartilhamento via embed e inclua o vídeo logo abaixo.</p>
-              </div>
-              <p>...... COLOQUE AQUI O SEU VIDEO ......</p>
-            </section>
-
-            <section id="ti_funcionalidades">
-              <h4>Funcionalidades</h4>
-              <p>Esta seção apresenta as funcionalidades da solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse"
-                  href="#collapseFuncionalidades">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseFuncionalidades">
-                <p>Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos
-                  administradores da solução.</p>
-                <p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2)
-                  Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
-              </div>
-
-              <section>
-                <h5>Funcionalidade 1 - Cadastro de Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
-                <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
-                  <li><strong>Instruções de acesso: </strong>
-                    <ul>
-                      <li>Abra o site e efetue o login</li>
-                      <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                      <li>Em seguida, escolha a opção Contatos</li>
-                    </ul>
-                  </li>
-                </ul>
-                <p class="text-center"><img class="img-fluid" src="assets/images/exemplo-funcionalidade.png"
-                    alt="Tela Cadastro de Contatos"></p>
-              </section>
-            </section>
-
             <!-- Estruturas de dados =============== -->
             <section id="ti_estruturas_dados">
               <h4>Estruturas de Dados</h4>
@@ -672,80 +612,49 @@
               </div>
 
               <section>
-                <h5>Estrutura de Dados - Contatos<span class="exemplo">EXEMPLO</span></h5>
+                <h5>Estrutura de Dados - Usuários</h5>
                 <p>Contatos da aplicação</p>
                 <pre>
-                  {
-                    "id": 1,
-                    "nome": "Leanne Graham",
-                    "cidade": "Belo Horizonte",
-                    "categoria": "amigos",
-                    "email": "Sincere@april.biz",
-                    "telefone": "1-770-736-8031",
-                    "website": "hildegard.org"
+                  { 
+                    name: "Rodrigo",
+                    phone: "123456789",
+                    email: "usuario1@email.com",
+                    address: "Rua A, 123",
+                    password: "123",
                   }
                 </pre>
               </section>
 
               <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
+                <h5>Estrutura de Dados - Usuários</h5>
                 <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
                 <pre>
                   {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
+                    nome: "Minha Empresa",
+                    cnpj: "12345678901234",
+                    descricao: "Uma empresa incrível",
+                    tipoNegocio: "Tecnologia",
+                    phone: "987654321",
+                    email: "empresa@email.com",
+                    localizacao: "Rua B, 456",
+                    password: "456",
+                    funcionarios: [
+                      {
+                        nome: "Nome Funcionario 1",
+                        data: "01/01/1990",
+                        genero: "Masculino",
+                        endereço: "Rua X, 789",
+                        tel: "987654321",
+                        email: "funcionario1@email.com",
+                        setor: "TI",
+                        user: "funcionario1",
+                        senha: "senha1"
+                      }
+                    ]
                   }
                 </pre>
               </section>
             </section>
-
-            <!-- Módulos e APIs ================= -->
-            <section id="ti_modulos_apis">
-              <h4>Módulos e APIs</h4>
-              <p>Esta seção apresenta os módulos e APIs utilizados na solução.
-                <button type="button" class="btn btn-light btn-sm float-right" data-toggle="collapse"
-                  href="#collapseModulos">Info</button>
-              </p>
-              <div class="alert alert-warning collapse" role="alert" id="collapseModulos">
-                <p>Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1)
-                  Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas
-                  para acesso a dados, serviços, etc.</p>
-              </div>
-
-              <section>
-                <h5>Images:</h5>
-                <ul>
-                  <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><span
-                      class="exemplo">EXEMPLO</span></li>
-                </ul>
-              </section>
-
-              <section>
-                <h5>Fonts:</h5>
-                <ul>
-                  <li>Icons Font Face - <a target="_blank"
-                      href="https://fontawesome.com/">https://fontawesome.com/</a><span class="exemplo">EXEMPLO</span>
-                  </li>
-                </ul>
-              </section>
-
-              <section>
-                <h5>Scripts:</h5>
-                <ul>
-                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a><span
-                      class="exemplo">EXEMPLO</span></li>
-                  <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a><span
-                      class="exemplo">EXEMPLO</span></li>
-                </ul>
-              </section>
-            </section>
-
-          </section>
-          <hr class="divider">
 
           <!-- FAQ ============================ -->
           <section id="ti_faq">
@@ -761,46 +670,43 @@
                 sistemas; (5) questões sobre a segurança da aplicação.</p>
             </div>
 
-            <span class="exemplo">EXEMPLO</span>
+            
             <div class="row">
               <div class="col-lg-12">
                 <div class="accordion accordion-alterate arrow-right" id="popularTopics">
                   <div class="card">
                     <div class="card-header" id="heading1">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                          aria-expanded="false" aria-controls="collapse1">What does royalty free mean?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse1">Quais são os serviços domésticos oferecidos pela nossa empresa?</a> </h5>
                     </div>
                     <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged. </div>
+                      <div class="card-body"> Oferecemos uma variedade de serviços domésticos, incluindo limpeza residencial,
+                         reparos elétricos, encanamento, jardinagem e muito mais. 
+                         Consulte nossa página de serviços para obter uma lista completa.
+                      </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading2">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2"
-                          aria-expanded="false" aria-controls="collapse2">What is a single application?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse2">Vocês oferecem garantia para os serviços prestados?</a> </h5>
                     </div>
                     <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque Anim pariatur cliche reprehenderit, enim eiusmod high life
-                        accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                        et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. </div>
+                      <div class="card-body"> Sim, garantimos a qualidade dos nossos 
+                        serviços. Se você não estiver satisfeito com o trabalho 
+                        realizado, entre em contato conosco imediatamente, e 
+                        faremos o possível para resolver qualquer problema.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading3">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3"
-                          aria-expanded="false" aria-controls="collapse3">What are some examples of permitted end
-                          products?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse3">Vocês fornecem materiais e equipamentos para os serviços?</a> </h5>
                     </div>
                     <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque persius interesset his et, in quot quidam persequeris vim, ad mea
-                        essent possim iriure. Mutat tacimates id sit. Ridens mediocritatem ius an, eu nec magna
-                        imperdiet. </div>
+                      <div class="card-body"> Sim, a empresa que irá prestar o serviço fornecerá todos os materiais e equipamentos 
+                        necessários para a realização dos serviços. A equipe chegará preparada e 
+                        equipada para realizar o trabalho de forma eficiente.</div>
                     </div>
                   </div>
                 </div>
@@ -822,7 +728,8 @@
                 tutoriais, etc. utilizados no desenvolvimento da solução; (2) links para sites, blogs, etc. utilizados
                 no desenvolvimento da solução.</p>
             </div>
-            <p>...... COLOQUE AQUI O SEU TEXTO ......</p>
+            <p>Aulas dos professores Rommel e Pedro, stack overflow, ChatGPT, aplicativos de delivery e serviços como Ifood e Uber.
+            </p>
           </section>
 
         </div>
