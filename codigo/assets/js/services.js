@@ -365,14 +365,14 @@ const dbInicial = {
         },
         {
             id: 34,
-            nome: "Empresa Delta",
-            cnpj: 78901234567890,
-            descricao: "Uma empresa de limpeza",
+            nome: "Faxina Express",
+            cnpj: 12345678,
+            descricao: "Uma empresa de limpeza rápida",
             tipo_negocio: "Servicos domesticos",
-            telefone: 5552345678,
-            email: "delta_cleaning@gmail.com",
-            endereço: "654 Cedar Lane, Wonderland",
-            senha: "deltaCleaning123"
+            telefone: 33333333,
+            email: "faxinaExpress@gmail.com",
+            endereço: "Rua x, 123",
+            senha: "faxina123"
         },
         {
             id: 35,
