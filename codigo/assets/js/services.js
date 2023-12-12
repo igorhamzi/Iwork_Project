@@ -321,14 +321,14 @@ const dbInicial = {
         },
         {
             id: 30,
-            nome: "Empresa Lambda",
-            cnpj: 89012345678901,
-            descricao: "Uma empresa de segurança",
+            nome: "Bob o Construtor",
+            cnpj: 123456789,
+            descricao: "Sua casa, sua vida",
             tipo_negocio: "Reformas e reparos",
-            telefone: 5555678901,
-            email: "lambda_security@gmail.com",
-            endereço: "789 Elm Street, Dreamland",
-            senha: "lambdaSecurity123"
+            telefone: 33333333,
+            email: "bob@gmail.com",
+            endereço: "Rua x, 123",
+            senha: "bob123"
         },
         {
             id: 31,
