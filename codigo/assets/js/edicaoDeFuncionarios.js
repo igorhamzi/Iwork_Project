@@ -1,13 +1,8 @@
-let funcionarios = JSON.parse(localStorage.getItem('funcionarios')) || [
-  { nome: 'Gabriel', cargo: 'Eletricista' },
-  { nome: 'Pedro', cargo: 'Jardineiro' },
-  { nome: 'José', cargo: 'Encanador' }
-]; 
+let funcionarios = [];
 
-if (!localStorage.getItem('funcionarios')) {
-  salvarNoLocalStorage();
-} else {
-  funcionarios = JSON.parse(localStorage.getItem('funcionarios'));
+if (localStorage.getItem('loginAtivo')) {
+  const empresaAtiva = JSON.parse(localStorage.getItem('loginAtivo'));
+  funcionarios = empresaAtiva.funcionarios || [];
 }
 
 let indiceEdicao = -1;
@@ -24,7 +19,7 @@ function mostrarFuncionarios() {
     nome.textContent = `Nome: ${funcionario.nome}`;
 
     const cargo = document.createElement('p');
-    cargo.textContent = `Cargo: ${funcionario.cargo}`;
+    cargo.textContent = `Cargo: ${funcionario.setor}`;
 
     const editarButton = document.createElement('button');
     editarButton.textContent = 'Editar';
@@ -59,7 +54,7 @@ function editarFormularioFuncionario(index) {
   document.getElementById('botaoSalvar').style.display = 'block';
 }
 
-document.getElementById('formularioFuncionario').addEventListener('submit', function(event) {
+document.getElementById('formularioFuncionario').addEventListener('submit', function (event) {
   event.preventDefault();
   const nome = document.getElementById('campoNome').value;
   const cargo = document.getElementById('campoCargo').value;
@@ -70,7 +65,7 @@ function editarFuncionario(nome, cargo) {
   if (nome !== '' && cargo !== '') {
     funcionarios[indiceEdicao].nome = nome;
     funcionarios[indiceEdicao].cargo = cargo;
-    salvarNoLocalStorage(); 
+    salvarNoLocalStorage();
     mostrarFuncionarios();
     limparInputs();
     indiceEdicao = -1;
@@ -81,7 +76,11 @@ function editarFuncionario(nome, cargo) {
 }
 
 function salvarNoLocalStorage() {
-  localStorage.setItem('funcionarios', JSON.stringify(funcionarios));
+  const empresaAtiva = JSON.parse(localStorage.getItem('loginAtivo')) || {};
+
+  empresaAtiva.funcionarios = funcionarios;
+
+  localStorage.setItem('loginAtivo', JSON.stringify(empresaAtiva));
 }
 
 function limparInputs() {
