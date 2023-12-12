@@ -4,7 +4,6 @@ function adddata() {
     var email = document.getElementById("Email").value;
     var endereco = document.getElementById("Endereço").value;
 
-    // Verificação de dados
     if (nome && telefone && email && endereco) {
         var usuario = {
             nome: nome,
@@ -25,6 +24,8 @@ function adddata() {
         document.getElementById("Endereço").value = "";
 
         alert("Cadastro realizado com sucesso!");
+        localStorage.setItem("loginAtivo", JSON.stringify(usuario));
+        window.location.href = "homeCliente.html";
     } else {
         alert("Por favor, preencha todos os campos.");
     }
