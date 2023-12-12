@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/codigo/assets/css/cadastroFuncionario.css">
-    <script src="https://kit.fontawesome.com/11aa876265.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -45,105 +44,212 @@
         <h1>Construindo conexões profissionais, um cadastro de sucesso!</h1>
         <h3>Cadastre seus funcionários e desbloqueie o potencial do seu negócio!</h3>
 
-        <div class="formulario">
-            <form action="">
-                <h3>Inforações Pessoais</h3>
 
-                <label for="nome">Nome Completo:</label>
+        <div class="formulario">
+            <form id="formulario">
+                <h3>Inforações Pessoais</h3>
+   
+                <label for="nome" id="labelNome">Nome Completo:</label>
                 <br>
                 <input type="text" name="nome" id="nome">
                 <br>
 
-                <label for="data">Data de Nascimento:</label>
+
+                <label for="data" id="labelData">Data de Nascimento:</label>
                 <br>
                 <input type="text" name="data" id="data">
                 <br>
 
-                <label for="gen">Genêro:</label>
+
+                <label for="gen" id="labelGen">Gênero:</label>
                 <br>
                 <input type="text" name="gen" id="gen">
                 <br>
 
-                <label for="residencial">Endereço Residêncial:</label>
+
+                <label for="residencial" id="labelResidencial">Endereço Residencial:</label>
                 <br>
                 <input type="text" name="residencial" id="residencial">
                 <br>
 
-                <label for="tel">Numero de telefone:</label>
+
+                <label for="tel" id="labelTel">Número de Telefone:</label>
                 <br>
                 <input type="text" name="tel" id="tel">
                 <br>
 
-                <label for="email">Email:</label>
+
+                <label for="email" id="labelEmail">Email:</label>
                 <br>
                 <input type="text" name="email" id="email">
                 <br>
 
-                <label for="setor">Setor ou departamento:</label>
+
+                <label for="setor" id="labelSetor">Setor ou Departamento:</label>
                 <br>
                 <input type="text" name="setor" id="setor">
                 <br>
             </form>
         </div>
 
-        <div class="login">
+
+        <div class="login" id="login">
             <input type="text" name="user" id="user" placeholder="Nome de Usuário:">
-
             <br>
-
             <input type="text" name="senha" id="senha" placeholder="senha">
         </div>
-
-        <input type="submit" value="Cadastrar Funcionário" id="cadastrarClienteBtn" onclick="location.href='/codigo/pages/edicaoDeFuncionarios.html'">
-
-
+       
+        <input type="submit" value="Cadastrar Funcionário" id="btn">
     </main>
 
 
+    <footer>
+        <div class="footer-content">
+          <div class="footer-icon">
+            <img src="logo.jpeg" alt="Ícone">
+          </div>
+          <div class="footer-links">
+            <a href="#">Ajuda</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Privacidade</a>
+          </div>
+        </div>
+      </footer>
+
     <script>
+//nav hamburguer
 
-        document.getElementById("nav_buttom").addEventListener("click", function () {
-            var nav = document.getElementById("nav_mob");
-            nav.style.display = "block";
+        var nav = document.getElementById('nav_mob');
+        var navBtn = document.getElementById('nav_buttom');
+
+        navBtn.addEventListener('click', () => {
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        })
+
+
+//fomulario
+        var login = document.getElementById('login');
+        var formulario = document.getElementById('formulario');
+        var inputUser = document.getElementById('user');
+        var inputSenha = document.getElementById('senha');
+        var btn = document.getElementById('btn');
+       
+        var labelNome = document.getElementById('labelNome');
+        var inputNome = document.getElementById('nome');
+
+
+        var labelData = document.getElementById('labelData');
+        var inputData = document.getElementById('data');
+
+
+        var labelGen = document.getElementById('labelGen');
+        var inputGen = document.getElementById('gen');
+
+
+        var labelResidencial = document.getElementById('labelResidencial');
+        var inputResidencial = document.getElementById('residencial');
+
+
+        var labelTel = document.getElementById('labelTel');
+        var inputTel = document.getElementById('tel');
+
+
+        var labelEmail = document.getElementById('labelEmail');
+        var inputEmail = document.getElementById('email');
+
+
+        var labelSetor = document.getElementById('labelSetor');
+        var inputSetor = document.getElementById('setor');
+
+//valiadação
+        inputNome.addEventListener('keyup', () => {
+            if (inputNome.value.length <= 2) {
+                labelNome.setAttribute('style', 'color:red');
+                labelNome.textContent = "Deve conter mais de 2 caracteres!";
+            }
+             else {
+                labelNome.textContent = "Nome Completo:";
+                labelNome.setAttribute('style', 'color:white');
+            }
+        });
+//data
+        inputData.addEventListener('keyup', () => {
+            var valorData = inputData.value;
+            var partesData = valorData.split('/');
+            var dia = parseInt(partesData[0], 10);
+            var mes = parseInt(partesData[1], 10);
+            var ano = parseInt(partesData[2], 10);
+
+            if (valorData.length !== 10 || isNaN(dia) || isNaN(mes) || isNaN(ano) || dia < 1 || dia > 31 || mes < 1 || mes > 12) {
+                labelData.style.color = 'red';
+                labelData.textContent = 'Insira uma data válida dd/mm/aaaa';
+            } else {
+                labelData.style.color = 'white';
+                labelData.textContent = 'Data de Nascimento:';
+            }
+        });
+//genero
+
+        inputGen.addEventListener('keyup', () => {
+            var valorGen = inputGen.value.toLowerCase();
+
+            if (valorGen === "feminino" || valorGen === "masculino") {
+                labelGen.textContent = "Gênero:";
+                labelGen.style.color = 'white';
+            } else {
+                labelGen.style.color = 'red';
+                labelGen.textContent = "Escreva feminino ou masculino";
+            }
+        });
+
+//telefone
+        
+        inputTel.addEventListener('keyup', () => {
+            var valorTel = inputTel.value;
+
+            if (valorTel.length === 10) {
+                labelTel.textContent = "Telefone:";
+                labelTel.style.color = 'white';
+            } else {
+                labelTel.style.color = 'red';
+                labelTel.textContent = "Número inválido";
+            }
         });
 
 
-        document.getElementById("cadastrarClienteBtn").addEventListener("click", function () {
-
-            var nome = document.getElementById("nome").value;
-            var data = document.getElementById("data").value;
-            var gen = document.getElementById("gen").value;
-            var residencial = document.getElementById("residencial").value;
-            var tel = document.getElementById("tel").value;
-            var email = document.getElementById("email").value;
-            var setor = document.getElementById("setor").value;
+        let funcionarios = JSON.parse(localStorage.getItem('funcionarios')) || [];
 
 
-            var funcionarioInfo = {
-                nome: nome,
-                data: data,
-                gen: gen,
-                residencial: residencial,
-                tel: tel,
-                email: email,
-                setor: setor
-            };
+        btn.addEventListener('click',() =>{
 
 
-            var username = document.getElementById("user").value;
-            var password = document.getElementById("senha").value;
+            funcionarios.push({
+                nome: inputNome.value,
+                data: inputData.value,
+                genero: inputGen.value,
+                endereço: inputResidencial.value,
+                tel: inputTel.value,
+                email: inputEmail.value,
+                setor: inputSetor.value,
+                user: inputUser.value,
+                senha: inputSenha.value
+            });
 
 
-            localStorage.setItem("db", JSON.stringify({
-                funcionarioInfo: funcionarioInfo,
-                username: username,
-                password: password
-            }));
+            localStorage.setItem('funcionarios', JSON.stringify(funcionarios));
 
-            document.getElementById("cadastroForm").reset();
+            alert("Cadastro efetuado com sucesso");
 
-            alert("Cadastro bem-sucedido!");
-        });
+            document.getElementById('formulario').reset();
+            document.getElementById('login').reset();
+
+            });
+
+            
     </script>
 
 </body>
