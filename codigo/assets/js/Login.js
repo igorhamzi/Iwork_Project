@@ -18,6 +18,30 @@ function initializeusuarios() {
       email: "empresa@email.com",
       localizacao: "Rua B, 456",
       password: "456",
+      funcionarios: [
+        {
+          nome: "Nome Funcionario 1",
+          data: "01/01/1990",
+          genero: "Masculino",
+          endereço: "Rua X, 789",
+          tel: "987654321",
+          email: "funcionario1@email.com",
+          setor: "TI",
+          user: "funcionario1",
+          senha: "senha1"
+        },
+        {
+          nome: "Nome Funcionario 2",
+          data: "02/02/1995",
+          genero: "Feminino",
+          endereço: "Rua Y, 123",
+          tel: "123456789",
+          email: "funcionario2@email.com",
+          setor: "RH",
+          user: "funcionario2",
+          senha: "senha2"
+        }
+      ]
     },
   ];
 

@@ -17,7 +17,8 @@ function addEmpresa() {
           telefone: telefone,
           email: email,
           localizacao: localizacao,
-          senha: senha
+          senha: senha,
+          funcionarios: []
       };
 
       var empresas = JSON.parse(localStorage.getItem("empresas")) || [];

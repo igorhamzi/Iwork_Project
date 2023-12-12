@@ -48,7 +48,7 @@
         <div class="formulario">
             <form id="formulario">
                 <h3>Inforações Pessoais</h3>
-   
+
                 <label for="nome" id="labelNome">Nome Completo:</label>
                 <br>
                 <input type="text" name="nome" id="nome">
@@ -98,26 +98,26 @@
             <br>
             <input type="text" name="senha" id="senha" placeholder="senha">
         </div>
-       
+
         <input type="submit" value="Cadastrar Funcionário" id="btn">
     </main>
 
 
     <footer>
         <div class="footer-content">
-          <div class="footer-icon">
-            <img src="/codigo/assets/images/Logo.jpeg" alt="Ícone">
-          </div>
-          <div class="footer-links">
-            <a href="#">Ajuda</a>
-            <a href="#">Termos de Uso</a>
-            <a href="#">Política de Privacidade</a>
-          </div>
+            <div class="footer-icon">
+                <img src="/codigo/assets/images/Logo.jpeg" alt="Ícone">
+            </div>
+            <div class="footer-links">
+                <a href="#">Ajuda</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
         </div>
-      </footer>
+    </footer>
 
     <script>
-//nav hamburguer
+        //nav hamburguer
 
         var nav = document.getElementById('nav_mob');
         var navBtn = document.getElementById('nav_buttom');
@@ -131,13 +131,13 @@
         })
 
 
-//fomulario
+        //fomulario
         var login = document.getElementById('login');
         var formulario = document.getElementById('formulario');
         var inputUser = document.getElementById('user');
         var inputSenha = document.getElementById('senha');
         var btn = document.getElementById('btn');
-       
+
         var labelNome = document.getElementById('labelNome');
         var inputNome = document.getElementById('nome');
 
@@ -165,18 +165,18 @@
         var labelSetor = document.getElementById('labelSetor');
         var inputSetor = document.getElementById('setor');
 
-//valiadação
+        //valiadação
         inputNome.addEventListener('keyup', () => {
             if (inputNome.value.length <= 2) {
                 labelNome.setAttribute('style', 'color:red');
                 labelNome.textContent = "Deve conter mais de 2 caracteres!";
             }
-             else {
+            else {
                 labelNome.textContent = "Nome Completo:";
                 labelNome.setAttribute('style', 'color:white');
             }
         });
-//data
+        //data
         inputData.addEventListener('keyup', () => {
             var valorData = inputData.value;
             var partesData = valorData.split('/');
@@ -192,7 +192,7 @@
                 labelData.textContent = 'Data de Nascimento:';
             }
         });
-//genero
+        //genero
 
         inputGen.addEventListener('keyup', () => {
             var valorGen = inputGen.value.toLowerCase();
@@ -206,8 +206,8 @@
             }
         });
 
-//telefone
-        
+        //telefone
+
         inputTel.addEventListener('keyup', () => {
             var valorTel = inputTel.value;
 
@@ -221,35 +221,35 @@
         });
 
 
-        let funcionarios = JSON.parse(localStorage.getItem('funcionarios')) || [];
 
+        btn.addEventListener('click', () => {
+            let empresaAtiva = JSON.parse(localStorage.getItem('loginAtivo'));
 
-        btn.addEventListener('click',() =>{
+            if (empresaAtiva) {
+                let funcionarios = empresaAtiva.funcionarios || [];
 
+                funcionarios.push({
+                    nome: inputNome.value,
+                    data: inputData.value,
+                    genero: inputGen.value,
+                    endereço: inputResidencial.value,
+                    tel: inputTel.value,
+                    email: inputEmail.value,
+                    setor: inputSetor.value,
+                    user: inputUser.value,
+                    senha: inputSenha.value
+                });
 
-            funcionarios.push({
-                nome: inputNome.value,
-                data: inputData.value,
-                genero: inputGen.value,
-                endereço: inputResidencial.value,
-                tel: inputTel.value,
-                email: inputEmail.value,
-                setor: inputSetor.value,
-                user: inputUser.value,
-                senha: inputSenha.value
-            });
+                empresaAtiva.funcionarios = funcionarios;
 
+                localStorage.setItem('loginAtivo', JSON.stringify(empresaAtiva));
 
-            localStorage.setItem('funcionarios', JSON.stringify(funcionarios));
+                alert("Cadastro efetuado com sucesso");
+            } else {
+                alert("Nenhuma empresa ativa encontrada. Faça login antes de cadastrar um funcionário.");
+            }
+        });
 
-            alert("Cadastro efetuado com sucesso");
-
-            document.getElementById('formulario').reset();
-            document.getElementById('login').reset();
-
-            });
-
-            
     </script>
 
 </body>
