@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
   font-family: Arial, sans-serif;
@@ -6,9 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body, html {
@@ -82,7 +85,7 @@ header {
   align-items: center;
   padding: 10px 20px;
   width: 100%;
-  top: 0;
+  margin-top: 0;
   border: none;
 }
 
