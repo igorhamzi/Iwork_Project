@@ -245,6 +245,14 @@
 
                 localStorage.setItem('loginAtivo', JSON.stringify(empresaAtiva));
 
+                document.getElementById('nome').value = "";
+                document.getElementById('data').value = "";
+                document.getElementById('gen').value = "";
+                document.getElementById('residencial').value = "";
+                document.getElementById('tel').value = "";
+                document.getElementById('email').value = "";
+                document.getElementById('setor').value = "";
+
                 alert("Cadastro efetuado com sucesso");
                 window.location.href = "edicaoDeFuncionarios.html";
             } else {

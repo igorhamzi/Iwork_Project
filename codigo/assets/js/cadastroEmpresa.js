@@ -38,7 +38,7 @@ function addEmpresa() {
 
       alert("Cadastro da empresa realizado com sucesso!");
       localStorage.setItem("loginAtivo", JSON.stringify(empresa));
-      window.location.href = "homeEmpresa.html";
+      window.location.href = "Login.html";
   } else {
       alert("Por favor, preencha todos os campos.");
   }

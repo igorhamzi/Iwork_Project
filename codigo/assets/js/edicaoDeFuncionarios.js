@@ -49,7 +49,7 @@ function excluirFuncionario(index) {
 function editarFormularioFuncionario(index) {
   const funcionario = funcionarios[index];
   document.getElementById('campoNome').value = funcionario.nome;
-  document.getElementById('campoCargo').value = funcionario.cargo;
+  document.getElementById('campoCargo').value = funcionario.setor;
   indiceEdicao = index;
   document.getElementById('botaoSalvar').style.display = 'block';
 }
@@ -64,7 +64,7 @@ document.getElementById('formularioFuncionario').addEventListener('submit', func
 function editarFuncionario(nome, cargo) {
   if (nome !== '' && cargo !== '') {
     funcionarios[indiceEdicao].nome = nome;
-    funcionarios[indiceEdicao].cargo = cargo;
+    funcionarios[indiceEdicao].setor = cargo;
     salvarNoLocalStorage();
     mostrarFuncionarios();
     limparInputs();

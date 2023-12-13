@@ -58,11 +58,11 @@ function checkLogin() {
     var empresas = JSON.parse(localStorage.getItem("empresas"));
 
     var foundUsuario = usuarios.find(function(usuario) {
-      return usuario.email === username && usuario.password === password;
+      return usuario.email === username && usuario.senha === password;
     });
 
     var foundEmpresa = empresas.find(function(empresa) {
-      return empresa.email === username && empresa.password === password;
+      return empresa.email === username && empresa.senha === password;
     });
 
     if (foundUsuario) {
@@ -80,7 +80,3 @@ function checkLogin() {
   usernameInput.value = "";
   passwordInput.value = "";
 }
-
-window.onload = function() {
-  initializeusuarios();
-};
